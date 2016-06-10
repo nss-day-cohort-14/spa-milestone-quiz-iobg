@@ -15,8 +15,11 @@ var CarLot = (function (carlot) {
       inventory=JSON.parse(event.target.responseText).cars;
       callback(inventory);
 
-
       });
+    }
+    carlot.getColor=function(selectedCard){
+      return selectedCard.childNodes[4].id;
+
     }
     return carlot;
 

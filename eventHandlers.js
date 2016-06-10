@@ -1,16 +1,19 @@
 var CarLot = (function(eventHandlers){
-	cars = document.getElementsByClassName("car");
 	input = document.getElementById("input");
-	eventHandlers.addHandlers = function(){
-		for(i=0; i< cars.length;i++){
+	eventHandlers.addHandlers = function(car,cars){
+		
 			//triggers the click effect of each specific card
-		cars[i].addEventListener("click",CarLot.clickEffect);
-	};
+		car.addEventListener("click",function(){
+				CarLot.clickEffect(event.currentTarget,cars,input);
+		});
+		
 		//gives the input a listener that replaces description text
-		input.addEventListener("keyup", CarLot.typeEffect);
+		input.addEventListener("keyup", function(){
+			CarLot.typeEffect(event.currentTarget,input);
+		});
 	
 	
 }
 return eventHandlers;
 })(CarLot || {});
-CarLot.loadInventory(CarLot.addHandlers);
+
