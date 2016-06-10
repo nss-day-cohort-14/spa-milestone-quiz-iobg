@@ -1,6 +1,5 @@
 
 var populatePage=function(inventory){
-	console.log(inventory);
 	var toDOM="";
 	var container=document.getElementById('container');
 	inventory.forEach(function(car,i){
