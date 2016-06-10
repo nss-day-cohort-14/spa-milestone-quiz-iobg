@@ -1,15 +1,18 @@
 var CarLot = (function(eventHandlers){
-	input = document.getElementById("input");
+	let input = document.getElementById("input");
+	var currentCar;
 	eventHandlers.addHandlers = function(car,cars){
 		
 			//triggers the click effect of each specific card
 		car.addEventListener("click",function(){
-				CarLot.clickEffect(event.currentTarget,cars,input);
+				currentCar=event.currentTarget;
+				CarLot.clickEffect(currentCar,cars,input);
+
 		});
 		
 		//gives the input a listener that replaces description text
 		input.addEventListener("keyup", function(){
-			CarLot.typeEffect(event.currentTarget,input);
+			CarLot.typeEffect(currentCar,input);
 		});
 	
 	
