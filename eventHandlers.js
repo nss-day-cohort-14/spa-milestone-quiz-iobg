@@ -12,5 +12,5 @@ var CarLot = (function(eventHandlers){
 	
 }
 return eventHandlers;
-})(CarLot);
+})(CarLot || {});
 CarLot.loadInventory(CarLot.addHandlers);

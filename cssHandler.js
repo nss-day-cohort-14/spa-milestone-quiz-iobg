@@ -31,5 +31,5 @@ var CarLot=(function(carCSS){
 
 		
 		return carCSS;
-	})(CarLot);
+	})(CarLot || {});
 CarLot.loadInventory(CarLot.addCSS);

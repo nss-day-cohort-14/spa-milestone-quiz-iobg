@@ -1,12 +1,12 @@
-var CarLot = (function () {
+var CarLot = (function (carlot) {
   var inventory = [];
 
-  return {
-    getInventory: function () {
+  
+    carlot.getInventory=function () {
       return inventory;
 
-    },
-    loadInventory: function (callback) {
+    }
+    carlot.loadInventory=function (callback) {
       //retrieves inventory from json
       var inventoryLoader = new XMLHttpRequest();
       inventoryLoader.open("GET", "inventory.json");
@@ -17,8 +17,9 @@ var CarLot = (function () {
 
 
       });
-    },
-  };
+    }
+    return carlot;
 
-})();
+
+})(CarLot || {});
 
