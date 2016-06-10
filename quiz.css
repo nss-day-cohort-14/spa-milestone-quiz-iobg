@@ -1,7 +1,7 @@
 .car {	border: 2px solid black;
 		border-radius:5px;
-		width:30%;
-		display:inline-block;
-		margin:1%;}
+		margin:30px;
+		height:300px;}
+		
 .clicked{border-width:5px;
 		 background:lightgray;}
