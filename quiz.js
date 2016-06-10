@@ -1,4 +1,4 @@
-
+(function(){
 var populatePage=function(inventory){
 	var toDOM="";
 	var container=document.getElementById('container');
@@ -30,3 +30,4 @@ var populatePage=function(inventory){
 	
 }
 CarLot.loadInventory(populatePage);
+})();
