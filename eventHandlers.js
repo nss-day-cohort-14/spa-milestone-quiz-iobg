@@ -7,6 +7,7 @@ var CarLot = (function(eventHandlers){
 		car.addEventListener("click",function(){
 				currentCar=event.currentTarget;
 				CarLot.clickEffect(currentCar,cars,input);
+				
 
 		});
 		
