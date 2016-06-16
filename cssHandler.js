@@ -18,7 +18,8 @@ var CarLot=(function(carCSS){
 	
 	carCSS.typeEffect= function(selectedCard,input){
 		//sets car description to input value
-		selectedCard.childNodes[6].innerHTML=input.value;
+		var description=selectedCard.getElementsByClassName("description")[0];
+		description.innerHTML=input.value;
 	}
 
 		return carCSS;

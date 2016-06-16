@@ -17,10 +17,8 @@ var CarLot = (function (carlot) {
 
       });
     }
-    carlot.getColor=function(selectedCard){
-      return selectedCard.childNodes[4].id;
 
-    }
+    
     return carlot;
 
 
