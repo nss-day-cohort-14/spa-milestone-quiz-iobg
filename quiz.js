@@ -22,8 +22,9 @@ var populatePage=function(inventory){
 	var carsOnPage= document.getElementsByClassName("car");
 
 	for(let w=0; w<carsOnPage.length;w++){
+		console.log(inventory[w]);
 		//passes car and color of car to be set as border color of that car
-		CarLot.addCSS(carsOnPage[w],CarLot.getColor(carsOnPage[w]));
+		CarLot.addCSS(carsOnPage[w],inventory[w].color);
 		//adds event handlers to each car
 		CarLot.addHandlers(carsOnPage[w],carsOnPage);
 	}
